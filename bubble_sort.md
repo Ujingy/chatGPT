@@ -29,3 +29,32 @@ graph TD
     G -- 바깥 for문 종료 --> End
 
 ```
+
+### 코드 순서도
+
+```mermaid
+graph TD
+    Start[시작]
+    A[딕셔너리 data 초기화]
+    B[items 리스트 초기화: data를 리스트로 변환]
+    C{바깥 for문: i=0부터 len(items)-1}
+    D{안쪽 for문: j=0부터 len(items)-1-i}
+    E{items[j][1] > items[j+1][1] 확인}
+    F[items[j]와 items[j+1] 위치 교환 (Swap)]
+    G[j 증가하여 다음 원소 비교]
+    H[i 증가]
+    I[종료 및 sorted_data 출력]
+
+    Start --> A
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -- 예 --> F
+    E -- 아니오 --> G
+    F --> G
+    G -- 다시 안쪽 for문으로 --> D
+    G -- 안쪽 for문 종료 --> H
+    H -- 다시 바깥 for문으로 --> C
+    H -- 바깥 for문 종료 --> I
+```
