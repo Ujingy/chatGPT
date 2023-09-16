@@ -1,5 +1,5 @@
 # chatGPT
-## test1
+## test1 : 시퀀시 다이어그램(호텔 예약 프로세스)
 
 ```mermaid
 sequenceDiagram
@@ -38,7 +38,7 @@ sequenceDiagram
 
 
 
-## test2
+## test2 클래스 다이어그램(호텔 예약 시스템 클래스 구조)
 
 ```mermaid
 classDiagram
@@ -82,7 +82,7 @@ classDiagram
 
 ```
 
-## test3
+## test3 오류 체크 테스트
 ```mermaid
 classDiagram
   class MembershipSystem {
