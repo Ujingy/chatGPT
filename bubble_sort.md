@@ -1,4 +1,4 @@
-
+'''python
 
 def bubble_sort(dictionary):
     keys = list(dictionary.keys())
@@ -21,3 +21,4 @@ data = {'John': 130, 'Sarah': 140, 'Emma': 120, 'Michael': 150, 'Emily': 135}
 # 정렬된 딕셔너리 출력
 sorted_data = bubble_sort(data)
 print(sorted_data)
+'''
