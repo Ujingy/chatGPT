@@ -2,15 +2,15 @@
 
 ###
     Start(Start)
-    A[Convert Dictionary to List of Tuples]
-    B[Set i to 0]
-    C{Is i < len(items) - 1?}
-    D[Set j to 0]
-    E{Is j < len(items) - 1 - i?}
-    F{items[j][1] > items[j + 1][1]?}
-    G[Swap items[j] and items[j + 1]]
-    H[Increment j by 1]
-    I[Increment i by 1]
+    A. [Convert Dictionary to List of Tuples]
+    B. [Set i to 0]
+    C. {Is i < len(items) - 1?}
+    D. [Set j to 0]
+    E. {Is j < len(items) - 1 - i?}
+    F. {items[j][1] > items[j + 1][1]?}
+    G. [Swap items[j] and items[j + 1]]
+    H. [Increment j by 1]
+    I. [Increment i by 1]
     End[Convert List of Tuples back to Dictionary]
     
 ``` mermaid
