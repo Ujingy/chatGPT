@@ -1,3 +1,23 @@
+# 딕셔너리의 값으로 버블 정렬하기
+``` python
+data = {'John': 130, 'Sarah': 140, 'Emma': 120, 'Michael': 150, 'Emily': 135}
+
+# 딕셔너리를 튜플의 리스트로 변환
+items = list(data.items())
+
+# 버블정렬
+for i in range(len(items) - 1):
+    for j in range(len(items) - 1 - i):
+        if items[j][1] > items[j + 1][1]:
+            items[j], items[j + 1] = items[j + 1], items[j]
+            print(items)  # 정렬 과정 출력
+
+# 정렬된 딕셔너리로 변환
+sorted_data = dict(items)
+print(sorted_data)
+```
+
+
 # 파이썬 코드 실행 순서도
 
 ###
