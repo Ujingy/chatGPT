@@ -4,9 +4,7 @@
 John: 130, Sarah: 140, Emma: 120, Michael: 150, Emily: 135
 ```
 ## 시퀀스 다이어그램(딕셔너리 버블정렬)
-``` mermaid
-graph TD
-    Start[시작]
+ Start[시작]
     A[items 리스트 초기화: 딕셔너리 data에서 items로 변환]
     B{바깥 for문: i=0부터 len(items)-1}
     C{안쪽 for문: j=0부터 len(items)-1-i}
@@ -15,7 +13,9 @@ graph TD
     F[j 증가하여 다음 원소 비교]
     G[i 증가]
     End[종료 및 items 출력]
-
+    
+``` mermaid
+graph TD
     Start --> A
     A --> B
     B --> C
