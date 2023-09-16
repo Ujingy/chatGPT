@@ -1,6 +1,7 @@
 # 파이썬 코드 실행 순서도
 
-Start(Start)
+###
+    Start(Start)
     A[Convert Dictionary to List of Tuples]
     B[Set i to 0]
     C{Is i < len(items) - 1?}
