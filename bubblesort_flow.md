@@ -61,3 +61,29 @@ graph TD
 7. 내부 루프가 완료되면 i 값을 증가시키고 외부 루프를 계속합니다.
 8. 모든 정렬이 완료되면 튜플의 리스트를 다시 딕셔너리로 변환합니다.
 Mermaid를 사용하여 위의 UML 다이어그램을 웹 페이지에 렌더링하려면, 해당 Mermaid 코드를 웹 페이지 HTML에 포함시켜야 합니다.
+
+# 딕셔너리 버블정렬 시퀀스 다이어그램
+``` mermaid
+sequenceDiagram
+    participant User
+    participant Code
+    participant Dictionary
+    participant List
+    participant BubbleSort
+
+    User->>Code: Start
+    Code->>Dictionary: Initialize data
+    Code->>List: Convert to list of tuples (items)
+    loop for i in range
+        Code->>BubbleSort: Outer loop starts
+        loop for j in range
+            Code->>BubbleSort: Inner loop starts
+            opt items[j][1] > items[j + 1][1]
+                BubbleSort->>List: Swap items
+            end
+        end
+    end
+    Code->>Dictionary: Convert list back to sorted dictionary
+    User->>Code: View sorted result
+```
+
