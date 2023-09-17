@@ -15,17 +15,25 @@ John: 130, Sarah: 140, Emma: 120, Michael: 150, Emily: 135
 * End[종료 및 items 출력]
     
 ``` mermaid
-graph TD
-    Start --> A
-    A --> B
-    B --> C
-    C --> D
-    D -- 예 --> E
-    D -- 아니오 --> F
-    E --> F
-    F -- 다시 안쪽 for문으로 --> C
-    F -- 안쪽 for문 종료 --> G
-    G -- 다시 바깥 for문으로 --> B
-    G -- 바깥 for문 종료 --> End
+sequenceDiagram
+    participant User
+    participant Code
+    participant Dictionary
+    participant List
+    participant BubbleSort
 
+    User->>Code: Start
+    Code->>Dictionary: Initialize data
+    Code->>List: Convert to list of tuples (items)
+    loop for i in range
+        Code->>BubbleSort: Outer loop starts
+        loop for j in range
+            Code->>BubbleSort: Inner loop starts
+            opt items[j][1] > items[j + 1][1]
+                BubbleSort->>List: Swap items
+            end
+        end
+    end
+    Code->>Dictionary: Convert list back to sorted dictionary
+    User->>Code: View sorted result
 ```
