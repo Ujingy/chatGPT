@@ -1,36 +1,96 @@
-# 딕셔너리 버블정렬 과정
+# 딕셔너리의 값으로 버블 정렬하기
+``` python
+data = {'John': 130, 'Sarah': 140, 'Emma': 120, 'Michael': 150, 'Emily': 135}
 
-1. A[시작: 딕셔너리 data를 items 리스트로 변환]
-2. B[바깥 for문 시작: i=0부터 len(items)-1까지]
-3. C[안쪽 for문 시작: j=0부터 len(items)-1-i까지]
-4. D{items[j][1] > items[j+1][1] 인가?}
-5. E[두 원소의 위치를 바꾼다 (Swap)]
-6. F[안쪽 for문 반복: j 증가]
-7. G[바깥 for문 반복: i 증가]
-8. H[정렬 완료: items 출력]
+# 딕셔너리를 튜플의 리스트로 변환
+items = list(data.items())
+
+# 버블정렬
+for i in range(len(items) - 1):
+    for j in range(len(items) - 1 - i):
+        if items[j][1] > items[j + 1][1]:
+            items[j], items[j + 1] = items[j + 1], items[j]
+            print(items)  # 정렬 과정 출력
+
+# 정렬된 딕셔너리로 변환
+sorted_data = dict(items)
+print(sorted_data)
+```
+
+
+# 파이썬 코드 실행 순서도
+
+###
+    Start(Start)
+    A. [Convert Dictionary to List of Tuples]
+    B. [Set i to 0]
+    C. {Is i < len(items) - 1?}
+    D. [Set j to 0]
+    E. {Is j < len(items) - 1 - i?}
+    F. {items[j][1] > items[j + 1][1]?}
+    G. [Swap items[j] and items[j + 1]]
+    H. [Increment j by 1]
+    I. [Increment i by 1]
+    End[Convert List of Tuples back to Dictionary]
+    
 ``` mermaid
 graph TD
+    Start --> A
     A --> B
     B --> C
     C --> D
-    D -- 예 --> E
+    D --> E
     E --> F
-    D -- 아니오 --> F
-    F -- 다시 안쪽 for문으로 --> C
-    F -- 안쪽 for문 종료 --> G
-    G -- 다시 바깥 for문으로 --> B
-    G -- 바깥 for문 종료 --> H
+    F --> G
+    G --> H
+    H --> E
+    E -- No --> I
+    I --> C
+    C -- No --> End
+
 ```
 ###
-이 플로우 차트는 버블 정렬의 작동 방식을 순서도로 시각화한 것입니다:
+이 다이어그램은 다음과 같이 동작합니다:
 
-1. items 리스트를 초기화하고 딕셔너리 data에서 키와 값을 튜플로 변환하여 저장합니다.
-2. 바깥쪽 for문을 시작하여 전체 리스트를 여러 번 반복합니다.
-3. 안쪽 for문으로 들어가서 인접한 원소를 비교합니다.
-4. 현재 원소 (items[j][1])가 다음 원소 (items[j+1][1])보다 큰지 확인합니다.
-5. 만약 현재 원소가 더 크다면, 두 원소의 위치를 교환합니다.
-6. 현재 원소의 비교가 끝나면, j 값을 증가시켜 다음 원소를 비교합니다.
-7. 안쪽 for문의 모든 원소를 비교한 후, 바깥쪽 for문의 i 값을 증가시킵니다.
-모든 원소가 정렬될 때까지 이 작업을 반복합니다.
-최종적으로 정렬된 items 리스트를 출력하고 종료합니다.
-이 플로우 차트 코드를 Mermaid를 지원하는 플랫폼에 붙여넣어 시각화할 수 있습니다.
+1. 딕셔너리를 튜플의 리스트로 변환합니다.
+2. 외부 루프를 시작합니다 (i를 사용하여).
+3. 내부 루프를 시작합니다 (j를 사용하여).
+4. j 위치의 튜플 값과 j+1 위치의 튜플 값을 비교합니다.
+5. 필요한 경우 두 튜플을 교환합니다.
+6. j 값을 증가시키고 내부 루프를 계속합니다.
+7. 내부 루프가 완료되면 i 값을 증가시키고 외부 루프를 계속합니다.
+8. 모든 정렬이 완료되면 튜플의 리스트를 다시 딕셔너리로 변환합니다.
+Mermaid를 사용하여 위의 UML 다이어그램을 웹 페이지에 렌더링하려면, 해당 Mermaid 코드를 웹 페이지 HTML에 포함시켜야 합니다.
+
+# 딕셔너리 버블정렬 시퀀스 다이어그램
+``` mermaid
+sequenceDiagram
+    participant User
+    participant Code
+    participant Dictionary
+    participant List
+    participant BubbleSort
+
+    User->>Code: Start
+    Code->>Dictionary: Initialize data
+    Code->>List: Convert to list of tuples (items)
+    loop for i in range
+        Code->>BubbleSort: Outer loop starts
+        loop for j in range
+            Code->>BubbleSort: Inner loop starts
+            opt items[j][1] > items[j + 1][1]
+                BubbleSort->>List: Swap items
+            end
+        end
+    end
+    Code->>Dictionary: Convert list back to sorted dictionary
+    User->>Code: View sorted result
+```
+###
+이 시퀀스 다이어그램에서:
+ - participant: 시스템의 객체 또는 역할을 나타냅니다.
+ - User->>Code: 사용자와 코드 간에 메시지를 전송합니다.
+ - loop: 반복을 나타냅니다.
+ - opt: 선택적 실행을 나타냅니다.
+이 시퀀스 다이어그램은 파이썬 코드의 실행 순서를 나타내기 위해 단순화되었습니다.
+
