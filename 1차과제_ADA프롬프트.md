@@ -338,3 +338,19 @@ steps
 따라서, 4리터 물통에는 4리터의 물이 가득 차 있고, 3리터 물통에는 2리터의 물이 남게 됩니다.
 </details>
 
+```mermaid
+graph TD
+    step1[단계 1: (0L, 3L)] --> step2[단계 2: (3L, 0L)]
+    step2 --> step3[단계 3: (3L, 3L)]
+    step3 --> step4[단계 4: (4L, 2L)]
+    step4 --> step5[단계 5: (0L, 2L)]
+    step5 --> step6[단계 6: (2L, 0L)]
+
+style step1 fill:#f9d5e5,stroke:#333,stroke-width:2px;
+style step2 fill:#eeac99,stroke:#333,stroke-width:2px;
+style step3 fill:#e06377,stroke:#333,stroke-width:2px;
+style step4 fill:#c83349,stroke:#333,stroke-width:2px;
+style step5 fill:#5b9aa0,stroke:#333,stroke-width:2px;
+style step6 fill:#d6e6f2,stroke:#333,stroke-width:2px;
+```
+
