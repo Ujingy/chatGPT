@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Zoom on Hover</title>
+    <style>
+        #zoomable-image {
+            transition: transform 0.3s ease;
+            width: 300px;
+        }
+
+        #image-container:hover #zoomable-image {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="zoomable-image" src="C:\Users\82102\Downloads\cat-2536662_640.jpg" alt="Zoomable Image">
+    </div>
+
+    <script>
+        const imageContainer = document.getElementById("image-container");
+        const zoomableImage = document.getElementById("zoomable-image");
+
+        imageContainer.addEventListener("mouseover", () => {
+            zoomableImage.style.transform = "scale(1.2)";
+        });
+
+        imageContainer.addEventListener("mouseout", () => {
+            zoomableImage.style.transform = "scale(1)";
+        });
+    </script>
+</body>
+</html>

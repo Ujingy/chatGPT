@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort Sequence Diagram with Mermaid</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.min.js"></script>
+    <script>
+        // Initialize the mermaid library
+        mermaid.initialize({startOnLoad:true});
+    </script>
+</head>
+<body>
+
+<div class="mermaid">
+    sequenceDiagram
+        participant User
+        participant Code
+        participant Dictionary
+        participant List
+        participant BubbleSort
+
+        User->>Code: Start
+        Code->>Dictionary: Initialize data
+        Code->>List: Convert to list of tuples (items)
+        loop for i in range
+            Code->>BubbleSort: Outer loop starts
+            loop for j in range
+                Code->>BubbleSort: Inner loop starts
+                opt items[j][1] > items[j + 1][1]
+                    BubbleSort->>List: Swap items
+                end
+            end
+        end
+        Code->>Dictionary: Convert list back to sorted dictionary
+        User->>Code: View sorted result
+</div>
+
+</body>
+</html>
