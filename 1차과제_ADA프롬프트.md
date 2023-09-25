@@ -228,7 +228,7 @@ GIF 파일이 성공적으로 생성되었습니다!
 </head>
 <body>
     <div id="image-container">
-        <img id="zoomable-image" src="https://github.com/Ujingy/chatGPT/edit/main/cat-2536662_640.jpg" alt="Zoomable Image">
+        <img id="zoomable-image" src="cat-2536662_640.jpg" alt="Zoomable Image">
     </div>
 
     <script>
@@ -251,7 +251,6 @@ GIF 파일이 성공적으로 생성되었습니다!
 
 이 코드는 이미지에 마우스 포인터를 올리면 이미지가 확대되고, 마우스 포인터가 이미지 밖으로 나가면 이미지가 원래 크기로 돌아오게 됩니다. CSS의 `transition` 속성을 사용하여 확대/축소 효과에 부드러운 애니메이션을 적용했습니다.
 
-![html 보기](zoom_image.html)
 </details>
 
 1_5. # role: python </br># rule: 물통에 물을 가득 채운다. 물통의 물을 전부 다 비운다. 물통에 남은 물을 다른 물통에다 붓는다. 물통의 물을 다른 물통이 가득 찰 때까지 붓는다.
