@@ -4,6 +4,8 @@
 ### 1. ADA 프롬프트 3가지 
 1_1. 주어진 파일에서 생존자의 나이(Age)에 따른 추이를 차트로 표현해줘
 
+![첨부 파일 : titanic.csv](titanic.csv)
+
 <details>
   <summary>답변</summary>
 먼저, 주어진 파일을 확인하고 데이터를 로드하겠습니다.
