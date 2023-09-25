@@ -228,7 +228,7 @@ GIF 파일이 성공적으로 생성되었습니다!
 </head>
 <body>
     <div id="image-container">
-        <img id="zoomable-image" src="cat-2536662_640.jpg" alt="Zoomable Image">
+        <img id="zoomable-image" src="https://github.com/Ujingy/chatGPT/edit/main/cat-2536662_640.jpg" alt="Zoomable Image">
     </div>
 
     <script>
